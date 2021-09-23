@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../swipeslider-develop/dist/swipeslider.css"/>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../../swipeslider-develop/dist/swipeslider.js"></script>
+    <style>
+      
+      .sw-next::after {
+    content: url("../img/icon-right.png"); 
+    width: 18px;
+  
+      }
+      .sw-bullet{
+        /* background-image: url("../img/icon-right.png"); */
+      }
+      .sw-bullet li{
+        width: 20px;
+        background-image: url("../img/icon-right.png");
+        height: 20px;
+      }
+      .sw-bullet li.active{
+        background-image: url("../img/icon-left.png");
+      }
+    </style>
+</head>
+<body>
+    <figure id="sample_slider" class="swipeslider">
+        <ul class="sw-slides">
+          <li class="sw-slide">
+            <img src="../img/p-1.jpg" alt="Lang from Yie Ar Kung Fu">
+          </li>
+          <li class="sw-slide">
+            <img src="../img/p-2.jpg" alt="Summer beach concept">
+          </li>
+          <li class="sw-slide">
+            <img src="../img/p-3.jpg" alt="Tiny Tina from Borderlands 2">
+          </li>
+          <li class="sw-slide">
+            <img src="../img/p-4.jpg" alt="Redhead girl">
+          </li>
+        </ul>
+        </figure>
+
+        <img src="../img/icon-right.png"/>
+</body>
+<script>
+    $(window).load(function() {
+  $('#sample_slider').swipeslider({
+    sliderHeight:"100px",
+    transitionDuration:"100",//这个是过渡时间欸和持续时间关系没把握住的话会不太好
+    timingFunction:"easy-out",//也不知道这个干嘛的
+    autoPlay:true,//自动播放
+    autoPlayTimeout:1000,//自动播放时幻灯片之间的延迟
+    prevNextButtons:true,//左右按钮
+    bullets:true,//下面的那几个按钮
+    swipe:true,//移动端的左右移功能
+  });
+});
+</script>
+<script>
+  
+</script>
+</html>
